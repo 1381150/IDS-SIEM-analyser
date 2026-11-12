@@ -52,7 +52,6 @@ def preprocess_unsw():
     df[df.is_train == 0].drop(columns="is_train").to_parquet(OUT / "unsw_test.parquet")
     return df
 
-
 if __name__ == "__main__":
     preprocess_cicids()
     preprocess_unsw()
